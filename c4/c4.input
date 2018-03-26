@@ -1,0 +1,47 @@
+&GATEWAY
+Coord
+10
+ 
+ C        0.601834    1.751513    0.000000
+ H       -0.325305    2.320796    0.000000
+ H        1.524314    2.324185    0.000000
+ C        0.601834    0.410960    0.000000
+ H        1.551620   -0.124889    0.000000
+ C       -0.601834   -0.410960    0.000000
+ H       -1.551620    0.124889    0.000000
+ C       -0.601834   -1.751513    0.000000
+ H        0.325305   -2.320796    0.000000
+ H       -1.524314   -2.324185    0.000000
+
+Basis = ANO-RCC-MB
+GROUP = NOSYM
+
+&SEWARD
+Medium
+
+&SCF
+
+&RASSCF
+ Spin = 1
+ Symmetry = 1
+ nActEl = 4 0 0
+ Inactive =  13
+ Ras2     =   4
+ Iter = 100 100
+ LumOrb
+
+&CASPT2 
+
+&RASSCF
+ Spin = 1
+ Symmetry = 1
+ nActEl = 4 0 0
+ Inactive =  13
+ Ras2     =   4
+ Iter = 100 100
+ LumOrb
+ DMRG = 1000
+ 3RDM
+
+&CASPT2 
+ CHEMPS2
