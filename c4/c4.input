@@ -43,5 +43,19 @@ Medium
  DMRG = 1000
  3RDM
 
+&RASSCF
+ Spin = 1
+ Symmetry = 1
+ nActEl = 4 0 0
+ Inactive =  13
+ Ras2     =   4
+ Iter = 100 100
+ LumOrb
+ DMRG = 1000
+ 3RDM
+ CHRE
+ DMREstart = 1
+
 &CASPT2 
  CHEMPS2
+

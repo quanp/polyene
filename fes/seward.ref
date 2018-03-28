@@ -1,0 +1,371 @@
+   License is going to expire in 42 days  on Wednesday May 9th, 2018
+   This copy of MOLCAS is licensed to Kristine Pierloot
+                                                                       
+                             ^^^                                       
+                             ^^^          ++++  +++++  ++++++ +   ++   
+                 ^^^        ^^^^^        ++  ++ ++  ++ ++     ++  ++   
+                ^^^^^       ^^ ^^        ++  ++ ++  ++ ++     +++ ++   
+                ^^ ^^      ^^   ^^       ++  ++ +++++  ++++   ++++++   
+                ^^  ^^     ^^   ^^       ++  ++ ++     ++     ++ +++   
+               ^^   ^  ^^^^  ^  ^^       ++  ++ ++     ++     ++  ++   
+               ^^  ^   ^^^   ^^ ^^        ++++  ++     ++++++ ++   +   
+               ^  ^^^   ^^  ^^^  ^^                                    
+            ^^^   ^^^   ^   ^^^    ^^                                  
+        ^^^^^^^  ^^^^^     ^^^^^   ^^^^^^                              
+     ^^^^^^^^^   ^^^^^^^^^^^^^^^   ^^^^^^^^^                           
+    ^^^^^^^^^^   ^^           ^^   ^^^    ^^^                          
+    ^^^^^^^^^^       ^^**^^^        ^     ^^^                          
+    ^^^^^^^^^^    ^^^^**^^^^^^^     ^  ^  ^^^                          
+    ^^^^^^^^^^   **^^***********    ^  ^  ^^^                          
+    ^^^^^^^^^   ^^***********^^^^   ^  ^  ^^^    ^^^^    ^^    ^^^^    
+    ^^^^^^^^^   ^^^***********^^^   ^  ^  ^^^   ^^  ^^  ^^^^  ^^   ^   
+    ^^^^^^^^^   ^^^^***********^^      ^  ^^^   ^      ^^  ^^ ^^       
+    ^^^^^^^^     ***********^^**       ^  ^^^   ^      ^^  ^^  ^^^^    
+    ^^^^^^        ^^^^^^^**^^^^        ^  ^^^   ^      ^^^^^^     ^^   
+    ^^^     ^^^      ^^^**^^     ^     ^   ^^   ^^  ^^ ^^  ^^ ^   ^^   
+          ^^^^^^^^^            ^^^^   ^^^        ^^^^  ^    ^  ^^^^    
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                           
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                              
+            ^^^^^^^^^^^^^^^^^^^^^^^^^                                  
+               ^^^^^^^^^^^^^^^^^^^        version 18.0                  
+                   ^^^^^^^^^^^                                         
+                       ^^^                tag o180313-0800                      
+                                              $Px$                     
+                                                                       
+ OpenMolcas is free software; you can redistribute it and/or modify it 
+ under the terms of the GNU Lesser General Public License version 2.1. 
+ OpenMolcas is distributed in the hope that it will be useful, but it  
+ is provided "as is" and without any express or implied warranties.    
+ For more details see the full text of the license in the file         
+ LICENSE or in <http://www.gnu.org/licenses/>.                         
+                                                                       
+                 Copyright (C) The OpenMolcas Authors                  
+           For the author list and the recommended citation,           
+                   consult the file CONTRIBUTORS.md                    
+
+configuration info
+------------------
+C Compiler ID: Intel
+C flags: -std=gnu99
+Fortran Compiler ID: Intel
+Fortran flags: -fpp -i8 -r8 -heap-arrays
+Definitions: _MOLCAS_;_HAVE_EXTRA_;_I8_;_LINUX_;_MOLCAS_MPP_;SCALAPACK;_MKL_
+Parallel: ON (GA=OFF)
+
+
+   -------------------------------------------------------------------
+  |                                                                   
+  |   Project         = fes
+  |   Submitted from  = /home/tccm1/polyene/fes
+  |   Scratch area    = /temp0/tccm1/fes.work
+  |   Save outputs to = WORKDIR
+  |   Molcas          = /home/tccm1/source/molcas-extra/build
+  |                                                                   
+  |   Scratch area is empty
+  |                                                                   
+  |       MOLCAS_TRAP = ON                  
+  |      MOLCAS_PRINT = 2                   
+  |     MOLCAS_NPROCS = 1                   
+  |     MOLCAS_SOURCE = /home/tccm1/source/molcas-extra/build
+  |                                                                   
+   -------------------------------------------------------------------
+--- Start Module: auto at Wed Mar 28 18:34:27 2018 
+
+++ ---------   Input file   ---------
+
+  &GATEWAY 
+    coord
+      24
+    converted from coord at Fri Feb  2 17:49:47 CET 2018
+    FE      0.000000    0.000000    1.447120
+    S      0.728857   -1.617933    0.000000
+    S      1.634990    0.802906    2.890459
+    S     -1.634990   -0.802906    2.890459
+    S     -0.728857    1.617933    0.000000
+    FE      0.000000    0.000000   -1.447120
+    S     -1.634990   -0.802906   -2.890459
+    S      1.634990    0.802906   -2.890459
+    C     -1.915032    0.734994    3.849369
+    H     -2.339010    1.513507    3.198766
+    H     -2.615389    0.537964    4.677551
+    H     -0.958509    1.106101    4.247889
+    C      1.915032   -0.734994    3.849369
+    H      2.339010   -1.513507    3.198766
+    H      2.615389   -0.537964    4.677551
+    H      0.958509   -1.106101    4.247889
+    C      1.915032   -0.734994   -3.849369
+    H      0.958509   -1.106101   -4.247889
+    H      2.615389   -0.537964   -4.677551
+    H      2.339010   -1.513507   -3.198766
+    C     -1.915032    0.734994   -3.849369
+    H     -2.615389    0.537964   -4.677551
+    H     -2.339010    1.513507   -3.198766
+    H     -0.958509    1.106101   -4.247889
+    basis 
+    Fe.ANO-RCC-VDZ, ANO-RCC-MB
+  &SEWARD
+    LOW Cholesky
+
+-- ----------------------------------
+
+--- Start Module: gateway at Wed Mar 28 18:34:28 2018 
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &GATEWAY
+
+                       only a single process is used, running in SERIAL mode
+                       available to each process: 5.0 GB of memory, 1 thread
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+ 
+      XYZ coordinates might move
+ 
+      To prevent changes in coordinates
+      use Group=C1 or small SymThreshold
+ 
+      Found SYMMETRY generators:  xy xyz         
+ 
+++    Symmetry information:
+      ---------------------
+ 
+                    --- Group Generators ---
+                    Rotation around the z-axis  
+                    Inversion through the origin
+ 
+                    Character Table for C2h
+ 
+                             E   C2(z)   i   s(xy)
+                    ag       1     1     1     1  xy, Rz
+                    bg       1    -1     1    -1  xz, Ry, yz, Rx
+                    au       1     1    -1    -1  z, I
+                    bu       1    -1    -1     1  x, y
+--
+ 
+ 
+++    Basis set information:
+      ----------------------
+ 
+ 
+      Basis set label: FE.ANO-RCC...5S4P2D.
+ 
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge 26.000000 au
+      Associated Actual Charge    26.000000 au
+      Nuclear Model: Point charge
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      21       5        X                  
+         p      15       4        X                  
+         d      10       2                 X         
+ 
+ 
+      Basis set label: S.ANO-RCC...3S2P.
+ 
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge 16.000000 au
+      Associated Actual Charge    16.000000 au
+      Nuclear Model: Point charge
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      17       3        X                  
+         p      12       2        X                  
+ 
+ 
+      Basis set label: C.ANO-RCC...2S1P.
+ 
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge  6.000000 au
+      Associated Actual Charge     6.000000 au
+      Nuclear Model: Point charge
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      14       2        X                  
+         p       9       1        X                  
+ 
+ 
+      Basis set label: H.ANO-RCC...1S.
+ 
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge  1.000000 au
+      Associated Actual Charge     1.000000 au
+      Nuclear Model: Point charge
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       8       1        X                  
+--
+ 
+ 
+++    Molecular structure info:
+      -------------------------
+ 
+                    ************************************************ 
+                    **** Cartesian Coordinates / Bohr, Angstrom **** 
+                    ************************************************ 
+ 
+     Center  Label                x              y              z                     x              y              z
+        1      FE1              0.000000       0.000000       2.734660              0.000000       0.000000       1.447120
+        2      FE1              0.000000       0.000000      -2.734660              0.000000       0.000000      -1.447120
+        3      S2               1.377340      -3.057450       0.000000              0.728857      -1.617933       0.000000
+        4      S2              -1.377340       3.057450       0.000000             -0.728857       1.617933       0.000000
+        5      S3               3.089683       1.517272       5.462176              1.634990       0.802906       2.890459
+        6      S3              -3.089683      -1.517272       5.462176             -1.634990      -0.802906       2.890459
+        7      S3              -3.089683      -1.517272      -5.462176             -1.634990      -0.802906      -2.890459
+        8      S3               3.089683       1.517272      -5.462176              1.634990       0.802906      -2.890459
+        9      C4              -3.618886       1.388937       7.274253             -1.915032       0.734994       3.849369
+       10      C4               3.618886      -1.388937       7.274253              1.915032      -0.734994       3.849369
+       11      C4               3.618886      -1.388937      -7.274253              1.915032      -0.734994      -3.849369
+       12      C4              -3.618886       1.388937      -7.274253             -1.915032       0.734994      -3.849369
+       13      H5              -4.420088       2.860114       6.044792             -2.339010       1.513507       3.198766
+       14      H5               4.420088      -2.860114       6.044792              2.339010      -1.513507       3.198766
+       15      H5               4.420088      -2.860114      -6.044792              2.339010      -1.513507      -3.198766
+       16      H5              -4.420088       2.860114      -6.044792             -2.339010       1.513507      -3.198766
+       17      H6              -4.942369       1.016605       8.839290             -2.615389       0.537964       4.677551
+       18      H6               4.942369      -1.016605       8.839290              2.615389      -0.537964       4.677551
+       19      H6               4.942369      -1.016605      -8.839290              2.615389      -0.537964      -4.677551
+       20      H6              -4.942369       1.016605      -8.839290             -2.615389       0.537964      -4.677551
+       21      H7              -1.811319       2.090228       8.027347             -0.958509       1.106101       4.247889
+       22      H7               1.811319      -2.090228       8.027347              0.958509      -1.106101       4.247889
+       23      H7               1.811319      -2.090228      -8.027347              0.958509      -1.106101      -4.247889
+       24      H7              -1.811319       2.090228      -8.027347             -0.958509       1.106101      -4.247889
+ 
+                    ************************************************* 
+                    **** InterNuclear Distances / Bohr, Angstrom **** 
+                    ************************************************* 
+ 
+     Atom centers         Bohr        Angstrom
+   13 H5        9 C4      2.077946        1.099602
+   14 H5       10 C4    
+   15 H5       11 C4    
+   16 H5       12 C4    
+   21 H7        9 C4      2.079965        1.100670
+   22 H7       10 C4    
+   23 H7       11 C4    
+   24 H7       12 C4    
+   17 H6        9 C4      2.083166        1.102364
+   18 H6       10 C4    
+   19 H6       11 C4    
+   20 H6       12 C4    
+   21 H7       13 H5      3.365847        1.781129
+   22 H7       14 H5    
+   23 H7       15 H5    
+   24 H7       16 H5    
+   17 H6       13 H5      3.388292        1.793007
+   18 H6       14 H5    
+   19 H6       15 H5    
+   20 H6       16 H5    
+   21 H7       17 H6      3.408136        1.803508
+   22 H7       18 H6    
+   23 H7       19 H6    
+   24 H7       20 H6    
+    9 C4        6 S3      3.465506        1.833867
+   10 C4        5 S3    
+   11 C4        8 S3    
+   12 C4        7 S3    
+    3 S2        1 FE1     4.327059        2.289781
+    3 S2        2 FE1   
+    4 S2        1 FE1   
+    4 S2        2 FE1   
+    5 S3        1 FE1     4.391765        2.324022
+    6 S3        1 FE1   
+    7 S3        2 FE1   
+    8 S3        2 FE1   
+   21 H7        6 S3      4.607426        2.438145
+   22 H7        5 S3    
+   23 H7        8 S3    
+   24 H7        7 S3    
+   17 H6        6 S3      4.610627        2.439839
+   18 H6        5 S3    
+   19 H6        8 S3    
+   20 H6        7 S3    
+   13 H5        6 S3      4.612042        2.440587
+   14 H5        5 S3    
+   15 H5        8 S3    
+   16 H5        7 S3    
+    2 FE1       1 FE1     5.469321        2.894240
+   22 H7       21 H7      5.531702        2.927251
+   24 H7       23 H7    
+   21 H7        5 S3      5.561314        2.942920
+   22 H7        6 S3    
+   23 H7        7 S3    
+   24 H7        8 S3    
+--
+ 
+ 
+            Nuclear Potential Energy           2319.88713954 au
+ 
+--- Stop Module:  gateway at Wed Mar 28 18:34:29 2018 /rc=0 ---
+--- Start Module: seward at Wed Mar 28 18:34:29 2018 
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SEWARD
+
+                       only a single process is used, running in SERIAL mode
+                       available to each process: 5.0 GB of memory, 1 thread
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+               SEWARD will generate:
+                  Multipole Moment integrals up to order  2
+                  Kinetic Energy integrals
+                  Nuclear Attraction integrals (point charge)
+                  One-Electron Hamiltonian integrals
+                  Velocity integrals
+                  Relativistic Douglas-Kroll-Hess integrals:
+                    - Parametrization         : EXP
+                    - DKH order of Hamiltonian: 2
+                    - DKH order of Properties : 0
+                         - multipole moment operators
+                         - electric potential operators
+                         - contact operators
+                  Atomic mean-field integrals
+                  Cholesky decomposed two-electron repulsion integrals
+                   - CD Threshold:   0.10E-03
+ 
+                   Integrals are discarded if absolute value <: 0.10E-39
+                   Integral cutoff threshold is set to       <: 0.10E-39
+ 
+                    Unitary symmetry adaptation
+ 
+ 
+            Nuclear Potential Energy           2319.88713954 au
+ 
+ 
+      Basis set specifications :
+      Symmetry species         ag   bg   au   bu 
+      Basis functions           39   31   34   36
+ 
+      Cholesky vectors         163  141  149  156
+ 
+ 
+ 
+  Input file to MOLDEN was generated!
+ 
+**************************************************
+MEMORY WARNING: use of FLUSH operation deprecated!
+please contact the developer of this module and
+ask him/her to fix this!
+**************************************************
+**************************************************
+MEMORY WARNING: use of FLUSH operation deprecated!
+please contact the developer of this module and
+ask him/her to fix this!
+**************************************************
+**************************************************
+MEMORY WARNING: use of FLUSH operation deprecated!
+please contact the developer of this module and
+ask him/her to fix this!
+**************************************************
+**************************************************
+MEMORY WARNING: use of FLUSH operation deprecated!
+please contact the developer of this module and
+ask him/her to fix this!
+**************************************************
+--- Stop Module:  seward at Wed Mar 28 18:36:44 2018 /rc=0 ---
+--- Module seward spent 2 minutes and 15 seconds 
+--- Stop Module:  auto at Wed Mar 28 18:36:44 2018 /rc=0 ---
+--- Module auto spent 2 minutes and 17 seconds 

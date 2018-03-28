@@ -1,0 +1,18 @@
+>> COPY $CurrDir/startorb $WorkDir/$Project.RasOrb
+ 
+ &RASSCF &END                                                                   
+Symmetry                                                                        
+    3                                                                           
+Spin                                                                            
+    11                                                                           
+nActEl
+    10    0    0    
+Inactive          
+    25  19  20  24
+Ras2
+     6   4   6   4
+lumorb                                                                          
+
+ITERations = 12 100
+DAVTolerance = 1.0E-5
+DMRG = 500
