@@ -61,3 +61,13 @@ Medium
  CIONly
 
 >>ENDDO
+
+&RASSCF
+ Spin = 1
+ Symmetry = 1
+ nActEl = 10 0 0
+ Inactive =  31
+ Ras2     =  10
+ Iter = 100 100
+ LumOrb
+ DMRG = 100
