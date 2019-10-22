@@ -42,6 +42,8 @@ Medium
  Iter = 100 100
  LumOrb
 
+&CASPT2
+
 >>FOREACH D in (100, 200, 400)
 
 &RASSCF
@@ -52,7 +54,13 @@ Medium
  Ras2     =  10
  Iter = 100 100
  LumOrb
+ CISO = CHEMPS2
  DMRG = $D
  CIONly
+ 3RDM
+
+&CASPT2
+ CHEMPS2
 
 >>ENDDO
+

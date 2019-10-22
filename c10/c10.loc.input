@@ -42,6 +42,8 @@ Medium
  Iter = 100 100
  LumOrb
 
+&CASPT2
+
 &LOCALISATION
  FREEze
  NFROzen = 31
@@ -57,17 +59,15 @@ Medium
  Ras2     =  10
  Iter = 100 100
  LumOrb
+ CISO = CHEMPS2
  DMRG = $D
  CIONly
+ CHNOcanonical
+ 3RDM
+
+&CASPT2
+ CHEMPS2
+ CHTRansform
 
 >>ENDDO
 
-&RASSCF
- Spin = 1
- Symmetry = 1
- nActEl = 10 0 0
- Inactive =  31
- Ras2     =  10
- Iter = 100 100
- LumOrb
- DMRG = 100

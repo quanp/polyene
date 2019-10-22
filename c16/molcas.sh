@@ -16,7 +16,7 @@ export MOLCAS_DICE=8
 export MOLCAS_BLOCK=8
 
 export CurrDir=$PWD
-export WorkDir=/temp0/quan/$MOLCAS_PROJECT.work
+export WorkDir=/temp0/quan/$MOLCAS_PROJECT.work3
 export Project=$MOLCAS_PROJECT
 
 
@@ -25,4 +25,6 @@ rm $WorkDir/*Orb $WorkDir/tmp*/*Orb $WorkDir/INPORB $WorkDir/tmp*/INPORB $WorkDi
 
 cd $CurrDir
 
-molcas c4.input > c4.log
+#molcas c16.input > c16.log
+#molcas c16.loc.input > c16.loc.log
+molcas c16.sym.input > c16.sym.log

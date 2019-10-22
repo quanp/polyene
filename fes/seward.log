@@ -1,5 +1,5 @@
-   License is going to expire in 42 days  on Wednesday May 9th, 2018
-   This copy of MOLCAS is licensed to Kristine Pierloot
+   License is going to expire in 45 days  on Thursday December 5th, 2019
+   This copy of MOLCAS is licensed to  Quan Phung
                                                                        
                              ^^^                                       
                              ^^^          ++++  +++++  ++++++ +   ++   
@@ -27,9 +27,9 @@
      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                           
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                              
             ^^^^^^^^^^^^^^^^^^^^^^^^^                                  
-               ^^^^^^^^^^^^^^^^^^^        version 18.0                  
+               ^^^^^^^^^^^^^^^^^^^        version                   
                    ^^^^^^^^^^^                                         
-                       ^^^                tag o180313-0800                      
+                       ^^^                tag adea471-dirty                      
                                               $Px$                     
                                                                        
  OpenMolcas is free software; you can redistribute it and/or modify it 
@@ -56,20 +56,23 @@ Parallel: ON (GA=OFF)
    -------------------------------------------------------------------
   |                                                                   
   |   Project         = fes
-  |   Submitted from  = /home/tccm1/polyene/fes
-  |   Scratch area    = /temp0/tccm1/fes.work
+  |   Submitted from  = /home/quan/molcas/dmrg/polyene/polyene/fes
+  |   Scratch area    = /temp0/quan/fes.work
   |   Save outputs to = WORKDIR
-  |   Molcas          = /home/tccm1/source/molcas-extra/build
+  |   Molcas          = /home/quan/source/private/molcas-extra/build-gradient
   |                                                                   
   |   Scratch area is empty
   |                                                                   
-  |       MOLCAS_TRAP = ON                  
+  |      MOLCAS_BLOCK = 8                   
+  |     MOLCAS_NPROCS = 4                   
+  |      MOLCAS_NODES = node87              
+  |     MOLCAS_SOURCE = /home/quan/source/private/molcas-extra/build-gradient
   |      MOLCAS_PRINT = 2                   
-  |     MOLCAS_NPROCS = 1                   
-  |     MOLCAS_SOURCE = /home/tccm1/source/molcas-extra/build
+  |       MOLCAS_DICE = 8                   
+  |       MOLCAS_TRAP = ON                  
   |                                                                   
    -------------------------------------------------------------------
---- Start Module: auto at Wed Mar 28 18:34:27 2018 
+--- Start Module: auto at Mon Oct 21 07:14:11 2019 
 
 ++ ---------   Input file   ---------
 
@@ -108,14 +111,17 @@ Parallel: ON (GA=OFF)
 
 -- ----------------------------------
 
---- Start Module: gateway at Wed Mar 28 18:34:28 2018 
+--- Start Module: gateway at Mon Oct 21 07:14:18 2019 
+----------------------------------------------------------------------------------------------------
+ DGA/MPI-2 Parallel Environment:    4 Molcas's processes are running on   1 node(s) x  4 cores each
+----------------------------------------------------------------------------------------------------
  
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
 
                                               &GATEWAY
 
-                       only a single process is used, running in SERIAL mode
-                       available to each process: 5.0 GB of memory, 1 thread
+             launched 4 MPI processes, running in PARALLEL mode (work-sharing enabled)
+                        available to each process: 20 GB of memory, 1 thread
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
  
  
@@ -298,15 +304,19 @@ Parallel: ON (GA=OFF)
  
             Nuclear Potential Energy           2319.88713954 au
  
---- Stop Module:  gateway at Wed Mar 28 18:34:29 2018 /rc=0 ---
---- Start Module: seward at Wed Mar 28 18:34:29 2018 
+--- Stop Module:  gateway at Mon Oct 21 07:14:28 2019 /rc=0 ---
+--- Module gateway spent 10 seconds 
+--- Start Module: seward at Mon Oct 21 07:14:33 2019 
+----------------------------------------------------------------------------------------------------
+ DGA/MPI-2 Parallel Environment:    4 Molcas's processes are running on   1 node(s) x  4 cores each
+----------------------------------------------------------------------------------------------------
  
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
 
                                               &SEWARD
 
-                       only a single process is used, running in SERIAL mode
-                       available to each process: 5.0 GB of memory, 1 thread
+             launched 4 MPI processes, running in PARALLEL mode (work-sharing enabled)
+                        available to each process: 20 GB of memory, 1 thread
 ()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
  
                SEWARD will generate:
@@ -345,27 +355,7 @@ Parallel: ON (GA=OFF)
  
   Input file to MOLDEN was generated!
  
-**************************************************
-MEMORY WARNING: use of FLUSH operation deprecated!
-please contact the developer of this module and
-ask him/her to fix this!
-**************************************************
-**************************************************
-MEMORY WARNING: use of FLUSH operation deprecated!
-please contact the developer of this module and
-ask him/her to fix this!
-**************************************************
-**************************************************
-MEMORY WARNING: use of FLUSH operation deprecated!
-please contact the developer of this module and
-ask him/her to fix this!
-**************************************************
-**************************************************
-MEMORY WARNING: use of FLUSH operation deprecated!
-please contact the developer of this module and
-ask him/her to fix this!
-**************************************************
---- Stop Module:  seward at Wed Mar 28 18:36:44 2018 /rc=0 ---
---- Module seward spent 2 minutes and 15 seconds 
---- Stop Module:  auto at Wed Mar 28 18:36:44 2018 /rc=0 ---
---- Module auto spent 2 minutes and 17 seconds 
+--- Stop Module:  seward at Mon Oct 21 07:15:49 2019 /rc=0 ---
+--- Module seward spent 1 minute and 16 seconds 
+--- Stop Module:  auto at Mon Oct 21 07:15:52 2019 /rc=0 ---
+--- Module auto spent 1 minute and 41 seconds 

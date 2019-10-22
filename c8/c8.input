@@ -48,6 +48,7 @@ Medium
  Ras2     =   8
  Iter = 100 100
  LumOrb
+ CISO = CHEMPS2
  DMRG = 1000
  3RDM
 

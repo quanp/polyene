@@ -1,6 +1,7 @@
 >> COPY $CurrDir/startorb $WorkDir/$Project.RasOrb
- 
- &RASSCF &END                                                                   
+
+&RASSCF &END                                                                   
+
 Symmetry                                                                        
     3                                                                           
 Spin                                                                            
@@ -15,4 +16,9 @@ lumorb
 
 ITERations = 12 100
 DAVTolerance = 1.0E-5
+
+CISO = CHEMPS2
 DMRG = 500
+3RDM
+NO4RDM
+
